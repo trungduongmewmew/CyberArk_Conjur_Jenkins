@@ -1,0 +1,34 @@
+#Author : DuongDT
+# Tao nhom cho jenkins
+- !group
+  id: JenkinsLab
+
+# Tao user jenkins
+- !user
+  id: jenkinstest
+
+# gan user vao nhom jenkins
+- !grant
+  role: !group JenkinsLab
+  member: !user jenkinstest
+
+# Gan quyen truy cap vao cac serect
+- !permit
+  role: !user jenkinstest
+  privilege: [read, execute]
+  resource: !variable "vault/LOB_Usersync1/Testing_Conjur/Operating System-MTech-Unix-10.10.11.198-root/password"
+
+- !permit
+  role: !user jenkinstest
+  privilege: [read, execute]
+  resource: !variable "vault/LOB_Usersync1/Testing_Conjur/Operating System-MTech-Unix-10.10.11.198-root/username"
+
+- !permit
+  role: !user jenkinstest
+  privilege: [read, execute]
+  resource: !variable "vault/LOB_Usersync1/Testing_Conjur/conjur_test_11.200/password"
+
+- !permit
+  role: !user jenkinstest
+  privilege: [read, execute]
+  resource: !variable "vault/LOB_Usersync1/Testing_Conjur/conjur_test_11.200/username"
