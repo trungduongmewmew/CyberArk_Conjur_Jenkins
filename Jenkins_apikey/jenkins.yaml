@@ -12,7 +12,7 @@
   role: !group JenkinsLab
   member: !user jenkinstest
 
-# Gan quyen truy cap vao cac serect
+# Gan quyen truy cap vao cac serect cho user jenkinstest
 - !permit
   role: !user jenkinstest
   privilege: [read, execute]
