@@ -1,3 +1,4 @@
+# Author : DuongDT
 import http.client
 
 # Conjur connection and authentication details
