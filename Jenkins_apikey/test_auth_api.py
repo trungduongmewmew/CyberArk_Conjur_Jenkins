@@ -1,7 +1,7 @@
 # Author : DuongDT
 import http.client
 
-# Conjur connection and authentication details
+# Khai bao tham so conjur
 CONJUR_HOST = "conjur-master.poc.local"
 CONJUR_ACCOUNT = "POC"
 CONJUR_USER_ID = "jenkinstest"
