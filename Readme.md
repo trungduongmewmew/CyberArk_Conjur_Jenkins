@@ -17,9 +17,9 @@
 
 - SSH vào server Jenkins, add host cho máy chủ conjur 
 - Copy rootca của conjur vào đường dẫn `/etc/pki/ca-trust/source/anchors`. Sau đó sử dụng command sau để trust root ca:  
-'update-ca-trust extract'  
+`update-ca-trust extract`   
 - Sử dụng command sau để kiểm tra xem cert đã trust chưa:  
-'openssl s_client -connect conjur-master.poc.local:443'  
+`openssl s_client -connect conjur-master.poc.local:443`    
 - Truy cập vào Jenkins portal cài đặt plugin cho CyberArk Conjur
 
 ![Jenkins Plugin](https://github.com/user-attachments/assets/3362b100-8220-4c47-bc4b-c2d041ccf25a)
